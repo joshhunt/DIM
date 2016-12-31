@@ -23,6 +23,13 @@
   </head>
 
   <body ng-app="dimApp" ng-strict-di ng-controller="dimAppCtrl as app" ng-class="{ 'show-elements': app.settings.showElements, itemQuality: app.featureFlags.qualityEnabled && app.settings.itemQuality, 'show-new-items': app.settings.showNewItems, 'new-item-animated': app.settings.showNewAnimation }">
+
+    <div class="old-chrome-dir-message" style="font-size: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center">
+      The directory the chrome extension is loaded from has changed.</br/></br/>
+      Ensure that you've build the extension (npm start), add re-add this unpacked extension from the app/generated directory<br/><br/>
+      Read the README for more details
+    </div>
+
     <div class="ng-cloak" ng-click="trackActivity()">
       <div id="header">
         <div class="content">
